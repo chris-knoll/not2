@@ -1,0 +1,117 @@
+body {
+  background: url("/roomy.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.room {
+  background: url("/roomy.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.office {
+  background: url("/office.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bar {
+  background: url("/bar.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.userName {
+  text-align: center;
+  color: red;
+}
+
+.friendsList{
+	color: Blue;
+	right:100px;
+}
+
+.mySideBar{
+	position:absolute;
+	height:100%;
+	top:0;
+	bottom:0;
+	left:0;
+	width:200px;
+  padding: 20px;
+	text-align:justify;
+	background:white;
+}
+
+.myFriendBar{
+	position:absolute;
+	height:100%;
+	top:0;
+	bottom:0;
+	right:0;
+	width:150px;
+	text-align:justify;
+  background-color: white;
+}
+
+.chat {
+  position: absolute;
+  bottom: 0;
+  left: 220px;
+  right: 170px;
+  max-height: 200px;
+  overflow: none;
+  -khtml-opacity: 0.8;        /* Safari 1.x */
+  opacity: 0.8;               /* Good browsers */
+}
+
+.actions {
+  position: absolute;
+  top: 10px;
+  left: 220px;
+  right: 170px;
+  background-color: white;
+}
+
+#chatMessages {
+   overflow:   auto;
+   position:   absolute;
+   bottom:     70px;
+   width: 100%;
+   max-height: 200px;
+  background: white;
+  padding: 5px;
+  font-size: 1.25em;
+ }
+
+
+.imageSizing{
+	height:auto;
+	width:auto;
+	max-height:90%;
+	max-width:100%;
+}
+
+
+.glyphicon {
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+div{
+	margin-bottom:10px;
+}
+
+.avatar {
+  max-height: 400px;
+  margin: auto;
+}
