@@ -4,7 +4,9 @@ import { Mongo } from "meteor/mongo";
 // export access to my collections
 export const playersCollection = new Mongo.Collection("players");
 export const messages = new Mongo.Collection("messages");
-export const actionsCollection = new Mongo.Collection("actions");
+export const officeActionsCollection = new Mongo.Collection("officeActions");
+export const roomActionsCollection = new Mongo.Collection("roomActionsCollection");
+export const barActionsCollection = new Mongo.Collection("barActionsCollection");
 
 export const playersDummyData = [
   {
@@ -38,49 +40,40 @@ export const messagesDummyData = [
   }
 ];
 
-export const actions = [
+export const officeActions = [
   {
-    "room": "office",
-    "actions": [
-      {
-        "name": "work",
-        "buttonDisplay": "Perform Honest Work",
-        "execute": function(workLevel) {
-          // Award a consistent amount of money at the expense of stamina
-        }
-      },
-      {
-        "name": "stealWork",
-        "buttonDisplay": "Steal Coworkers Work",
-        "execute": function() {
-          // Award a random amount of money (more than normal work), but chance
-          // to get caught and lower social rank
-        }
-      }
-    ]
+    "name": "work",
+    "buttonDisplay": "Perform Honest Work",
+    "execute": function(workLevel) {
+      // Award a consistent amount of money at the expense of stamina
+    }
   },
   {
-    "room": "room",
-    "actions": [
-      {
-        "name": "rest",
-        "buttonDisplay": "Rest",
-        "execute": function() {
-          // Rest up and gain stamina back so you can go work more
-        }
-      }
-    ]
-  },
+    "name": "stealWork",
+    "buttonDisplay": "Steal Coworkers Work",
+    "execute": function() {
+      // Award a random amount of money (more than normal work), but chance
+      // to get caught and lower social rank
+    }
+  }
+];
+
+export const roomActions = [
   {
-    "room": "bar",
-    "actions": [
-      {
-        "name": "buy",
-        "buttonDisplay": "Buy a Beer",
-        "execute": function() {
-          // Buy a beer - increase your social rank
-        }
-      }
-    ]
+    "name": "rest",
+    "buttonDisplay": "Rest",
+    "execute": function() {
+      // Rest up and gain stamina back so you can go work more
+    }
+  }
+];
+
+export const barActions = [
+  {
+    "name": "buy",
+    "buttonDisplay": "Buy a Beer",
+    "execute": function() {
+      // Buy a beer - increase your social rank
+    }
   }
 ];
