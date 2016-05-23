@@ -1,7 +1,12 @@
 <template name='leaderboard'>
-  <ul class='list-group'>
-    {{#each users}}
-      <li> {{username}}:  </li>
-    {{/each}}
-  </ul>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title text-center">Social Leaderboard</h3>
+    </div>
+    <div class="panel-body">
+        {{#each users}}
+          {{username}}: {{profile.socialrank}} <br>
+        {{/each}}
+    </div>
+  </div>
 </template>

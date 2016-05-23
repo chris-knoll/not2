@@ -11,3 +11,9 @@ Template.leaderboard.helpers({
     return Meteor.users.find();
   }
 });
+
+Template.character.helpers({
+  character: function() {
+    return Meteor.users.findOne({ _id: Meteor.userId()});
+  }
+});

@@ -10,8 +10,16 @@
   </nav>
 
   <div id='main'>
-    {{> leaderboard}}
-    {{> yield}}
+    <div class="col-sm-2">
+      {{> character}}
+    </div>
+
+    <div class="col-sm-8">
+      {{> yield}}
+    </div>
+    <div class="col-sm-2">
+        {{> leaderboard}}
+    </div>
   </div>
 </div>
 </template>
