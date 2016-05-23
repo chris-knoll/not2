@@ -1,12 +1,16 @@
 <template name="mainLayout">
-<body>
-  <div class='container'>
+<div class='container'>
+  <nav class='navbar navbar-default'>
     <ul class='nav navbar'>
       <li> <a class='navbar-brand' href='/room'>Room</a></li>
       <li> <a class='navbar-brand' href='/office'>Office</a></li>
       <li> <a class='navbar-brand' href='/bar'>Bar</a></li>
+      <li class='navbar-right'>{{> loginButtons}}</li>
     </ul>
+  </nav>
+
+  <div id='main'>
     {{> yield}}
   </div>
-</body>
+</div>
 </template>
