@@ -16,8 +16,8 @@ Accounts.onCreateUser(function(options, user) {
 });
 
 Meteor.publish('leaderboard', function() {
-	//sort by most recent changes
-	return Meteor.users.find({}, { username: 1});
+	//Top scores first
+	return Meteor.users.find();
 });
 
 Meteor.methods({

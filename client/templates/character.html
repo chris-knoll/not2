@@ -1,0 +1,14 @@
+<template name="character">
+  {{#with character}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title text-center">{{username}}</h3>
+    </div>
+    <div class="panel-body">
+        <img src="player_2.png" class="img-responsive imageSizing avatar">
+        <span class="glyphicon glyphicon-heart">{{profile.stamina}}</span><br>
+        <span class="glyphicon glyphicon-usd">{{profile.money}}</span>
+    </div>
+  </div>
+  {{/with}}
+</template>

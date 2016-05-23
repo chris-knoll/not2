@@ -8,7 +8,8 @@ Template.leaderboard.onCreated(function() {
 
 Template.leaderboard.helpers({
   users: function() {
-    return Meteor.users.find();
+    // Return users sorted by socialrank
+    return Meteor.users.find({}, {sort: {socialrank: -1}});
   }
 });
 
