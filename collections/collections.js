@@ -4,9 +4,7 @@ import { Mongo } from "meteor/mongo";
 // export access to my collections
 export const playersCollection = new Mongo.Collection("players");
 export const messages = new Mongo.Collection("messages");
-export const officeActionsCollection = new Mongo.Collection("officeActions");
-export const roomActionsCollection = new Mongo.Collection("roomActionsCollection");
-export const barActionsCollection = new Mongo.Collection("barActionsCollection");
+export const actionsCollection = new Mongo.Collection("actions");
 
 export const playersDummyData = [
   {
@@ -14,6 +12,7 @@ export const playersDummyData = [
     "name": "Jane",
     "stamina": 20,
     "money": 0,
+    "socialRank": 0,
     "room": "room"
   },
   {
@@ -21,6 +20,15 @@ export const playersDummyData = [
     "name": "Bob",
     "stamina": 45,
     "money": 2341,
+    "socialRank": 5,
+    "room": "room"
+  },
+  {
+    "userName": "murky1",
+    "name": "Murky",
+    "stamina": 45,
+    "money": 103,
+    "socialRank": 23,
     "room": "room"
   }
 ];
@@ -40,8 +48,9 @@ export const messagesDummyData = [
   }
 ];
 
-export const officeActions = [
+export const actions = [
   {
+    "room": "office",
     "name": "work",
     "buttonDisplay": "Perform Honest Work",
     "execute": function(workLevel) {
@@ -49,28 +58,25 @@ export const officeActions = [
     }
   },
   {
+    "room": "office",
     "name": "stealWork",
     "buttonDisplay": "Steal Coworkers Work",
     "execute": function() {
       // Award a random amount of money (more than normal work), but chance
       // to get caught and lower social rank
     }
-  }
-];
-
-export const roomActions = [
+  },
   {
+    "room": "room",
     "name": "rest",
     "buttonDisplay": "Rest",
     "execute": function() {
       // Rest up and gain stamina back so you can go work more
     }
-  }
-];
-
-export const barActions = [
+  },
   {
-    "name": "buy",
+    "room": "bar",
+    "name": "buyBeer",
     "buttonDisplay": "Buy a Beer",
     "execute": function() {
       // Buy a beer - increase your social rank
