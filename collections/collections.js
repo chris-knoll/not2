@@ -1,52 +1,7 @@
 // Import the Mongo object
 import { Mongo } from "meteor/mongo";
 
-// export access to my collections
-export const playersCollection = new Mongo.Collection("players");
-export const messages = new Mongo.Collection("messages");
-export const actionsCollection = new Mongo.Collection("actions");
-
-export const playersDummyData = [
-  {
-    "userName": "default",
-    "name": "Jane",
-    "stamina": 20,
-    "money": 0,
-    "socialRank": 0,
-    "room": "room"
-  },
-  {
-    "userName": "bob123",
-    "name": "Bob",
-    "stamina": 45,
-    "money": 2341,
-    "socialRank": 5,
-    "room": "room"
-  },
-  {
-    "userName": "murky1",
-    "name": "Murky",
-    "stamina": 45,
-    "money": 103,
-    "socialRank": 23,
-    "room": "room"
-  }
-];
-
-export const messagesDummyData = [
-  {
-    "name": "Billy",
-    "message": "Hello is there anyone out there?"
-  },
-  {
-    "name": "Billy",
-    "message": "Guess not."
-  },
-  {
-    "name": "God",
-    "message": "I'm always here, Billy."
-  }
-];
+Messages = new Mongo.Collection("messages");
 
 export const actions = [
   {
