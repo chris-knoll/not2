@@ -54,7 +54,7 @@
   margin-left: auto;
   margin-right: auto;
   float: none;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 #login-screen #login-dropdown-list {
@@ -84,4 +84,14 @@
   height: 200px;
   margin: 10px;
   border: 2px solid black;
+}
+
+.intro {
+  width: 60%;
+  margin: auto;
+  font-size: 1.2em;
+}
+
+.login-intro {
+  font-weight: bold;
 }
