@@ -4,9 +4,14 @@
       <h3 class="panel-title text-center">Social Leaderboard</h3>
     </div>
     <div class="panel-body">
+      <table class="leaderboard-table">
         {{#each users}}
-          {{profile.socialrank}} - {{username}} <br>
+          <tr>
+            <td>{{username}}</td>
+            <td>{{profile.socialrank}}</td>
+          </tr>
         {{/each}}
+      </table>
     </div>
   </div>
 </template>

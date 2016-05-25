@@ -10,18 +10,16 @@ Meteor.startup(() => {
 
 Accounts.onCreateUser(function(options, user) {
   user.profile = {};
-   user.profile.socialrank = 1;
-   // Assigns first and last names to the newly created user object
-   user.profile.stamina = 20;
-   user.profile.money = 100;
-   user.profile.room = "room";
-   user.profile.avatar = "";
+  user.profile.socialrank = 1;
+  user.profile.stamina = 20;
+  user.profile.money = 100;
+  user.profile.room = "room";
+  user.profile.avatar = "";
 
-   return user;
+  return user;
 });
 
 Meteor.publish('leaderboard', function() {
-	//Top scores first
 	return Meteor.users.find();
 });
 
