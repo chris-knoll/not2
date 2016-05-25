@@ -9,7 +9,7 @@ Template.leaderboard.onCreated(function() {
 Template.leaderboard.helpers({
   users: function() {
     // Return users sorted by socialrank
-    return Meteor.users.find({}, {sort: {socialrank: -1}});
+    return Meteor.users.find({}, {sort: {"profile.socialrank": -1}});
   }
 });
 

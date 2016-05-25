@@ -23,5 +23,14 @@ Meteor.publish('leaderboard', function() {
 Meteor.methods({
 	updateRoom: function(userId, roomname) {
 		Meteor.users.update(userId, {$set: {"profile.room": roomname}});
-	}
+	},
+  incMoney: function(userId, amount) {
+    Meteor.users.update(userId, {$inc: {"profile.money": amount}});
+  },
+  incStamina: function(userId, amount) {
+    Meteor.users.update(userId, {$inc: {"profile.stamina": amount}});
+  },
+  incRank: function(userId, amount) {
+    Meteor.users.update(userId, {$inc: {"profile.socialrank": amount}});
+  }
 });

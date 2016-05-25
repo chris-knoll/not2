@@ -12,6 +12,9 @@ Template.bar.events({
   },
 
   'click #buyRound': function(event) {
+
     alert("You buy a round of drinks for the bar.");
+    Meteor.call('incRank', Meteor.userId(), 5);
+    Meteor.call('incMoney', Meteor.userId(), -30);
   }
 });

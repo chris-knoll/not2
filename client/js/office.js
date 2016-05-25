@@ -1,6 +1,7 @@
 Template.office.events({
   'click #meteorWork': function(event) {
     alert("You spend 10 hours trying to get your Mongo collections to work on your Meteor project, but make no progress.  Your boss makes you give him all the money in your wallet to pay for your failure.");
+    Meteor.call('incMoney', Meteor.userId(), -5);
   },
 
   'click #stealCode': function(event) {
