@@ -9,6 +9,8 @@ Template.bar.helpers({
 Template.bar.events({
   'click #buyDrink': function(event) {
     alert("You bought a drink");
+    Meteor.call('incRank', Meteor.userId(), 1);
+    Meteor.call('incMoney', Meteor.userId(), -5);
   },
 
   'click #buyRound': function(event) {

@@ -5,7 +5,9 @@ Template.office.events({
   },
 
   'click #stealCode': function(event) {
-    alert("You steal your coworkers Meteor code and submit it to your boss as your own.  Your boss loves it and gives you a bonus!");
+    alert("You steal your coworkers Meteor code and submit it to your boss as your own.  Your boss loves it and gives you a bonus!  Your coworker finds out, and likes you less than they did before.");
+    Meteor.call('incMoney', Meteor.userId(), 40);
+    Meteor.call('incRank', Meteor.userId(), -1);
   }
 });
 
