@@ -18,3 +18,21 @@ Template.character.helpers({
     return Meteor.users.findOne({ _id: Meteor.userId()});
   }
 });
+
+Template.bar.helpers({
+  getActions: function() {
+    return Meteor.call('getActions', 'bar');
+  }
+});
+
+Template.office.helpers({
+  getActions: function() {
+    return Meteor.call('getActions', 'office');
+  }
+});
+
+Template.room.helpers({
+  getActions: function() {
+    return Meteor.call('getActions', 'room');
+  }
+});

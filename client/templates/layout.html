@@ -1,12 +1,10 @@
 <template name="mainLayout">
 <div class='container'>
   <nav class='navbar navbar-default'>
-    <ul class='nav navbar'>
-      <li> <a class='navbar-brand' href='/room'>Room</a></li>
-      <li> <a class='navbar-brand' href='/office'>Office</a></li>
-      <li> <a class='navbar-brand' href='/bar'>Bar</a></li>
-      <li class='navbar-right'>{{> loginButtons}}</li>
-    </ul>
+      <a class='navbar-brand' href='/room'>Room</a>
+      <a class='navbar-brand' href='/office'>Office</a>
+      <a class='navbar-brand' href='/bar'>Bar</a>
+      <span class='navbar-right login-buttons'>{{> loginButtons}}</span>
   </nav>
 
   <div id='main'>

@@ -1,7 +1,8 @@
 <template name='home'>
-  {{#if currentUser}}
-    <h1> You are logged in</h1>
-  {{else}}
-    <h1> Log in above</h1>
-  {{/if}}
+  <div class='container text-center'>
+    <h1> Meteor Developer Simulator </h1>
+    <div id="login-screen">
+      {{> loginButtons}}
+    </div>
+  </div>
 </template>

@@ -31,3 +31,39 @@
   max-height: 400px;
   margin: auto;
 }
+
+.login-buttons {
+  margin-right: 20px;
+  margin-top: 14px;
+  list-style:none;
+}
+
+#login-screen .dropdown-menu {
+  display: block;
+  position: relative;
+  height: 220px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  margin-top: 100px;
+}
+
+#login-screen #login-dropdown-list {
+  display: block;
+}
+
+/* Hides the toggle that you click on */
+
+#login-screen a.dropdown-toggle {
+  display: none;
+}
+
+.action {
+  width: 200px;
+  height: 50px;
+}
+
+.actionButtons {
+  text-align: center;
+}
