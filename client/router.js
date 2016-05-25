@@ -1,3 +1,12 @@
+Router.onBeforeAction(function(){
+  if (!Meteor.user()){
+    Router.go('/');
+    this.next();
+  } else {
+    this.next();
+  }
+});
+
 Router.route('/', function() {
   this.render('home');
   $('body').removeClass('room office class bar');
