@@ -1,6 +1,6 @@
 Router.route('/', function() {
   this.render('home');
-  $('body').removeClass();
+  $('body').removeClass('room office class bar');
 });
 Router.route('/bar', function() {
   this.layout('mainLayout');
@@ -26,3 +26,5 @@ Router.route('/class', function() {
   $('body').removeClass('bar office room').addClass('class');
   Meteor.call('updateRoom', Meteor.userId(), "class");
 });
+
+Router.route('/avatars');

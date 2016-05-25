@@ -1,0 +1,8 @@
+<template name="avatars">
+  <div class="container text-center">
+    <h1> Choose an avatar </h1>
+    {{#each getAvatars}}
+      <img class="avatarSelection" data-id="{{img}}" src="{{img}}.jpeg">
+    {{/each}}
+  </div>
+</template>

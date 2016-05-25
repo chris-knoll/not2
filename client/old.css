@@ -77,4 +77,11 @@
 
 .actionButtons {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatarSelection {
+  height: 200px;
+  margin: 10px;
+  border: 2px solid black;
 }
