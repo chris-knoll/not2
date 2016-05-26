@@ -8,6 +8,11 @@ Meteor.startup(() => {
   }
 });
 
+//Used to publish the data from the messages database.
+  Meteor.publish('theUserMessage', function(){
+    return MessagesCollection.find({public: true});
+  });
+
 Accounts.onCreateUser(function(options, user) {
   user.profile = {};
   user.profile.socialrank = 1;
@@ -27,6 +32,8 @@ Meteor.publish('avatars', function() {
   return AvatarsCollection.find();
 });
 
+
+
 Meteor.methods({
 	updateRoom: function(userId, roomname) {
 		Meteor.users.update(userId, {$set: {"profile.room": roomname}});
@@ -43,5 +50,16 @@ Meteor.methods({
   setAvatar: function(userId, avatar)
   {
     Meteor.users.update(userId, {$set: {"profile.avatar": avatar}});
+  },
+  newUserMessage: function(userMessage){
+    var currentPlayer = Meteor.userId();
+    //save our message
+    MessagesCollection.insert({
+      public: true,
+      message: userMessage,
+      name: Meteor.users.findOne({_id: currentPlayer}).username,
+      owner: currentPlayer,
+      date: 'Today' // the today is temporary until the date function is found and used in its place
+    });
   }
 });
