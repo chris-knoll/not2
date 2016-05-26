@@ -5,12 +5,6 @@ chat stuff
 
 *****************************************************************/
 
-function scrollChat(){
-  var height = $('#chatMessages')[0].scrollHeight;
-
-  $('#chatMessages').scrollTop(height);
-};
-
 Template.chat.onCreated(function() {
   //save some initial data for our messaging application
   Session.setDefault('messages', []);
@@ -28,7 +22,6 @@ Template.chat.events({
 
     $('#messageText').val("");
 
-
   }
 });
 
@@ -37,8 +30,6 @@ Template.playerMessages.helpers({
     return MessagesCollection.find().fetch().reverse();
   }
 });
-
-
 
 Template.registerHelper('messagesExist', function() {
  return Session.get('messages').length > 0;

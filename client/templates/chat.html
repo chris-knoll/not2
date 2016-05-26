@@ -1,21 +1,22 @@
 <Template name="chat">
 
   <div class="chat">
-
-    <form class="newMessage">
-      <div class="form-group inputLocation">
-        <p>
-          <h2 style="color:red">Messages</h2>
-        </p>
-        <input type="text" id="messageText" class="form-control">
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">
+        <h3 class="panel-title text-center">Bar Chat</h3>
       </div>
-    </form>
+      <div class="panel-body">
+        <form class="newMessage">
+          <div class="form-group inputLocation">
+            <input type="text" id="messageText" class="form-control" placeholder="Type a message...">
+          </div>
+        </form>
 
-    <div id="chatMessages">
-      <!-- message list -->
-      {{>playerMessages}}
+        <div id="chatMessages">
+          <!-- message list -->
+          {{>playerMessages}}
+        </div>
       </div>
-
+    </div>
   </div>
-
 </Template>
