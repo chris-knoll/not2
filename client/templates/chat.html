@@ -1,16 +1,20 @@
 <Template name="chat">
 
   <div class="chat">
+
+    <form class="newMessage">
+      <div class="form-group inputLocation">
+        <p>
+          <h2 style="color:red">Messages</h2>
+        </p>
+        <input type="text" id="messageText" class="form-control">
+      </div>
+    </form>
+
     <div id="chatMessages">
       <!-- message list -->
       {{>playerMessages}}
       </div>
-
-    <form class="newMessage">
-      <div class="form-group">
-        <input type="text" id="messageText" class="form-control">
-      </div>
-    </form>
 
   </div>
 

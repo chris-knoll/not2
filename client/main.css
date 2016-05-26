@@ -117,12 +117,18 @@
 #chatMessages {
    overflow:   auto;
    position:   absolute;
-   bottom:     70px;
+   bottom:     0px;
    width: 100%;
    max-height: 200px;
   background: white;
   padding: 5px;
   font-size: 1.25em;
+ }
+
+ .inputLocation{
+   position: absolute;
+   bottom: 220px;
+   width: 100%;
  }
 
 /*end of chat stuff */

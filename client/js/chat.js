@@ -28,20 +28,17 @@ Template.chat.events({
 
     $('#messageText').val("");
 
-    scrollChat();
+
   }
 });
 
 Template.playerMessages.helpers({
   allPlayerMessages: function() {
-    return MessagesCollection.find();
+    return MessagesCollection.find().fetch().reverse();
   }
 });
 
-//Scroll chat any time it's rendered on screen
-Template.playerMessages.onRendered(function() {
- scrollChat();
-});
+
 
 Template.registerHelper('messagesExist', function() {
  return Session.get('messages').length > 0;
