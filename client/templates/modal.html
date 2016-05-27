@@ -1,0 +1,36 @@
+<template name="modal">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">{{title}}</h4>
+                </div>
+
+                <div class="modal-body">
+                    {{message}}
+                </div>
+
+                <div class="modal-body text-center">
+                  <div class="statChange">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="glyphtext">{{socialRank}}</span>
+                  </div>
+                  <div class="statChange">
+                    <span class="glyphicon glyphicon-usd"></span>
+                    <span class="glyphtext">{{money}}</span>
+                  </div>
+                  <div class="statChange">
+                    <span class="glyphicon glyphicon-heart"></span>
+                    <span class="glyphtext">{{stamina}}</span>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

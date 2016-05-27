@@ -35,6 +35,10 @@
   padding: 10px;
 }
 
+.glyphtext {
+  font-size: 1.8em;
+}
+
 .avatar {
   margin: auto;
   border: 1px solid grey;
