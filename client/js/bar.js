@@ -23,7 +23,9 @@ Template.bar.events({
     if (Meteor.user().profile.money >= 30) {
       Modal.show('modal', {
         'title': 'Bought a Round',
-        'message': 'You buy a round of drinks for the bar.  Everyone at the bar likes you!'
+        'message': 'You buy a round of drinks for the bar.  Everyone at the bar likes you!',
+        'socialRank': '+5',
+        'money': '-30'
       });
       Meteor.call('incRank', Meteor.userId(), 5);
       Meteor.call('incMoney', Meteor.userId(), -30);
