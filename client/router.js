@@ -5,11 +5,11 @@ Router.onBeforeAction(function(){
   this.next();
 });
 
+
 Router.onBeforeAction(function() {
   site = $('body').addClass(this.route.getName());
   previousSite = this.route.getName();
-  console.log(previousSite);
-  console.log(site);
+  Meteor.call('updateRoom', Meteor.userId(), previousSite);
   this.next();
 });
 
@@ -28,22 +28,18 @@ Router.route('/', function() {
 Router.route('/bar', function() {
   this.layout('mainLayout');
   this.render('bar');
-  Meteor.call('updateRoom', Meteor.userId(), "bar");
 });
 Router.route('/office', function() {
   this.layout('mainLayout');
   this.render('office');
-  Meteor.call('updateRoom', Meteor.userId(), "office");
 });
 Router.route('/room', function() {
   this.layout('mainLayout');
   this.render('room');
-  Meteor.call('updateRoom', Meteor.userId(), "room");
 });
 Router.route('/class', function() {
   this.layout('mainLayout');
   this.render('class');
-  Meteor.call('updateRoom', Meteor.userId(), "class");
 });
 
 Router.route('/avatars');
