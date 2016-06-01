@@ -53,13 +53,14 @@ Meteor.methods({
   },
   newUserMessage: function(userMessage){
     var currentPlayer = Meteor.userId();
+    var messageDate= new Date();
     //save our message
     MessagesCollection.insert({
       public: true,
       message: userMessage,
       name: Meteor.users.findOne({_id: currentPlayer}).username,
       owner: currentPlayer,
-      date: 'Today' // the today is temporary until the date function is found and used in its place
+      date: messageDate // the today is temporary until the date function is found and used in its place
     });
   }
 });
