@@ -7,7 +7,7 @@ Router.onBeforeAction(function(){
 
 
 Router.onBeforeAction(function() {
-  site = $('body').addClass(this.route.getName());
+$('body').addClass(this.route.getName());
   previousSite = this.route.getName();
   Meteor.call('updateRoom', Meteor.userId(), previousSite);
   this.next();
@@ -21,6 +21,7 @@ Router.onBeforeAction(function(){
     this.next();
   }
 });
+
 
 Router.route('/', function() {
   this.render('home');

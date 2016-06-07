@@ -16,6 +16,8 @@ Meteor.startup(() => {
 Accounts.onCreateUser(function(options, user) {
   user.profile = {};
   user.profile.socialrank = 1;
+  user.profile.maxStamina = 20;
+  user.profile.intelligence = 5;
   user.profile.stamina = 20;
   user.profile.money = 100;
   user.profile.room = "room";
@@ -46,6 +48,9 @@ Meteor.methods({
   },
   incRank: function(userId, amount) {
     Meteor.users.update(userId, {$inc: {"profile.socialrank": amount}});
+  },
+  incIntelligence: function(userId, amount) {
+    Meteor.users.update(userId, {$inc: {"profile.incIntelligence": amount}});
   },
   setAvatar: function(userId, avatar)
   {
