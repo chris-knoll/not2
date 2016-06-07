@@ -49,8 +49,11 @@ Meteor.methods({
   incRank: function(userId, amount) {
     Meteor.users.update(userId, {$inc: {"profile.socialrank": amount}});
   },
+  setRank: function(userId) {
+    Meteor.users.update(userId, {'$set': {"profile.socialrank": 0}});
+  },
   incIntelligence: function(userId, amount) {
-    Meteor.users.update(userId, {$inc: {"profile.incIntelligence": amount}});
+    Meteor.users.update(userId, {$inc: {"profile.intelligence": amount}});
   },
   setAvatar: function(userId, avatar)
   {
