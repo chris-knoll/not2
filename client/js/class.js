@@ -6,6 +6,7 @@ Template.class.events({
         'message': 'You are too tired to perform that action.. perhaps you should go rest?',
         'socialRank': '+0',
         'money': '+0',
+        'intelligence': '+0',
         'stamina': '+0'
       });
     } else {
@@ -29,6 +30,7 @@ Template.class.events({
         'title': 'Too tired...',
         'message': 'You are too tired to perform that action.. perhaps you should go rest?',
         'socialRank': '+0',
+        'intelligence': '+0',
         'money': '+0',
         'stamina': '+0'
       });
@@ -54,6 +56,7 @@ Template.class.events({
         'message': 'You are too tired to perform that action.. perhaps you should go rest?',
         'socialRank': '+0',
         'money': '+0',
+        'intelligence': '+0',
         'stamina': '+0'
       });
     } else {

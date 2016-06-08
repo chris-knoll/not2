@@ -5,7 +5,7 @@ Template.character.events({
     var playerIntelligence = Meteor.user().profile.intelligence;
     var playerBaseStamina = Meteor.user().profile.maxStamina;
     Modal.show('playerStatModal', {
-      'title': playerName + 'Stats',
+      'title': playerName + " " + 'Stats',
       'stamina': playerStamina + '/' + playerBaseStamina,
       'intelligence': playerIntelligence
     });

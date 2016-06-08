@@ -6,6 +6,7 @@ Template.office.events({
         'message': 'You are too tired to perform that action.. perhaps you should go rest?',
         'socialRank': '+0',
         'money': '+0',
+        'intelligence': '+0',
         'stamina': '+0'
       });
     } else {
@@ -18,11 +19,12 @@ Template.office.events({
         'message': "You spend several hours trying to code your Meteor project, but make no progress. Your boss is not pleased with your progress and tells you to work hard.",
         'money': '+' + earnedMoney,
         'stamina': '-2',
+        'intelligence': '+0',
         'socialRank': '+0'
       });
       Meteor.call('incMoney', Meteor.userId(), earnedMoney);
       Meteor.call('incStamina', Meteor.userId(), -2);
-      Meteor.setTimeout(function(){Meteor.call('incStamina', Meteor.userId(), 2);}, 50000);
+      Meteor.setTimeout(function(){Meteor.call('incStamina', Meteor.userId(), 2);}, 10000);
     }
   },
 
@@ -33,6 +35,7 @@ Template.office.events({
         'message': 'You are too tired to perform that action.. perhaps you should go rest?',
         'socialRank': '+0',
         'money': '+0',
+        'intelligence': '+0',
         'stamina': '+0'
       });
     } else {
@@ -51,22 +54,24 @@ Template.office.events({
           'message': "You steal your coworkers Meteor code and submit it to your boss as your own. Your boss loves it and gives you a bonus!",
           'money': '+' + earnedMoney,
           'socialRank': '+0',
+          'intelligence': '+0',
           'stamina': '-3'
         });
         Meteor.call('incMoney', Meteor.userId(), earnedMoney);
         Meteor.call('incRank', Meteor.userId(), 0);
         Meteor.call('incStamina', Meteor.userId(), -3);
-        Meteor.setTimeout(function(){Meteor.call('incStamina', Meteor.userId(), 3);}, 50000);
+        Meteor.setTimeout(function(){Meteor.call('incStamina', Meteor.userId(), 3);}, 10000);
       }else {
         Modal.show('modal', {
           'message': "You attempted to steal your coworker's work, but got caught in the process. The police were called and you were made to pay all your money to get out of jail. Naturally your social status in society has gone down the drain.",
           'money': '-' + failedTheft,
           'socialRank': "Your rank is 0",
+          'intelligence': '+0',
           'stamina': '-3'
         });
         Meteor.call('setRank', Meteor.userId());
         Meteor.call('incMoney', Meteor.userId(), -failedTheft);
-        Meteor.setTimeout(function(){Meteor.call('incStamina', Meteor.userId(), 3);}, 50000);
+        Meteor.setTimeout(function(){Meteor.call('incStamina', Meteor.userId(), 3);}, 10000);
       }
     }
   }
